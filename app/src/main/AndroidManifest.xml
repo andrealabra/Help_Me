@@ -9,6 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project3">
+
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false"
+            android:label="SearchActivity"
+            android:theme="@style/Animation.Design.BottomSheetDialog" />
+        <activity
+            android:name=".PostingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_posting"
+            android:theme="@style/Theme.Project3.NoActionBar" />
         <activity
             android:name=".Register"
             android:exported="false" />
