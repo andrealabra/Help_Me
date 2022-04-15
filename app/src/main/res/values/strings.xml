@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">project3!</string>
+    <string name="app_name">Help me</string>
     <string name="title_activity_posting">PostingActivity</string>
+
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -91,4 +92,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+
 </resources>
