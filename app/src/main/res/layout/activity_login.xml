@@ -8,7 +8,20 @@
     android:orientation="vertical"
     tools:context=".Login">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity ="center"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="18dp"
+        android:text= "LogIn Here"
+        />
+
+
     <EditText
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
