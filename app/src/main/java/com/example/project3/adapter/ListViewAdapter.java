@@ -1,4 +1,4 @@
-package com.example.project3;
+package com.example.project3.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.example.project3.R;
+import com.example.project3.model.Search;
+import com.example.project3.SearchActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -16,7 +21,7 @@ public class ListViewAdapter extends BaseAdapter {
 
     Context mContext;
     LayoutInflater inflater;
-    private List<Search> Search = null;
+    private List<com.example.project3.model.Search> Search = null;
     private ArrayList<Search> arraylist;
 
     public ListViewAdapter(Context context, ArrayList<SearchActivity> SearchList) {

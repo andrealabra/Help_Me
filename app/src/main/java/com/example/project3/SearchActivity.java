@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SearchView;
 
+import com.example.project3.adapter.ListViewAdapter;
+import com.example.project3.model.Search;
+
 import java.util.ArrayList;
 
 

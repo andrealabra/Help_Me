@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 
-public class Posting extends AppCompatActivity {
+public class PostingActivity extends AppCompatActivity {
     ListView listView;
     String[] countries = new String[]{"Nauru", "Nepal", "Netherlands", "Netherlands Antilles",
             "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands",

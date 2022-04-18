@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project3" >
         <activity
-            android:name=".Posting"
+            android:name=".PostingActivity"
             android:exported="true" />
         <activity
             android:name=".SearchActivity"
@@ -20,9 +20,9 @@
             android:label="SearchActivity"
             android:theme="@style/Animation.Design.BottomSheetDialog" />
         <activity
-            android:name=".Register"
+            android:name=".RegisterActivity"
             android:exported="false" />
-        <activity android:name=".Login"
+        <activity android:name=".LoginActivity"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />

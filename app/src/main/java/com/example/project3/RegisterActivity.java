@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Register extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://helpme-19a66-default-rtdb.firebaseio.com/");
     @Override
@@ -47,13 +47,13 @@ public class Register extends AppCompatActivity {
                 if(fullnameTxt.isEmpty() || emailTxt.isEmpty() || phoneTxt.isEmpty()
                 || passwordTxt.isEmpty())
                 {
-                    Toast.makeText(Register.this, "Fill in all fields to continue", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Fill in all fields to continue", Toast.LENGTH_SHORT).show();
                 }
 
                 //This is to see if all passwords match
                 else if(!passwordTxt.equals(conPasswordTxt))
                 {
-                    Toast.makeText(Register.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
 
                 else{
@@ -63,7 +63,7 @@ public class Register extends AppCompatActivity {
                             //see if the number is registered
 
                             if(snapshot.hasChild(phoneTxt)){
-                                Toast.makeText(Register.this, "This phone number is already associated with an account", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, "This phone number is already associated with an account", Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 //send data to firebase & making phone number the unique id, everything wil be under phone number
@@ -71,7 +71,7 @@ public class Register extends AppCompatActivity {
                                 databaseReference.child("users").child(phoneTxt).child("email").setValue(emailTxt);
                                 databaseReference.child("users").child(phoneTxt).child("password").setValue(passwordTxt);
 
-                                Toast.makeText(Register.this, "Registration done sucessfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, "Registration done sucessfully", Toast.LENGTH_SHORT).show();
                                 finish();
 
                             }
