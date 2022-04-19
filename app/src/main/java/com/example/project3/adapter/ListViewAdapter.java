@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.project3.R;
-import com.example.project3.model.Search;
+import com.example.project3.model.SearchNames;
 import com.example.project3.SearchActivity;
 
 import java.util.ArrayList;
@@ -21,14 +21,14 @@ public class ListViewAdapter extends BaseAdapter {
 
     Context mContext;
     LayoutInflater inflater;
-    private List<com.example.project3.model.Search> Search = null;
-    private ArrayList<Search> arraylist;
+    private List<SearchNames> Search = null;
+    private ArrayList<SearchNames> arraylist;
 
-    public ListViewAdapter(Context context, ArrayList<SearchActivity> SearchList) {
+    public ListViewAdapter(Context context, ArrayList<SearchNames> SearchList) {
         mContext = context;
         this.Search = Search;
         inflater = LayoutInflater.from(mContext);
-        this.arraylist = new ArrayList<Search>();
+        this.arraylist = new ArrayList<SearchNames>();
         this.arraylist.addAll(Search);
     }
 
@@ -42,7 +42,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
     @Override
-    public Search getItem(int position) {
+    public SearchNames getItem(int position) {
         return Search.get(position);
     }
 
@@ -63,7 +63,7 @@ public class ListViewAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
         // Set the results into TextViews
-        holder.name.setText(Search.get(position).Search());
+        holder.name.setText(Search.get(position).getSearchName());
         return view;
     }
 
@@ -74,8 +74,8 @@ public class ListViewAdapter extends BaseAdapter {
         if (charText.length() == 0) {
           Search.addAll(arraylist);
         } else {
-            for (Search wp : arraylist) {
-                if (wp.Search().toLowerCase(Locale.getDefault()).contains(charText)) {
+            for (SearchNames wp : arraylist) {
+                if (wp.getSearchName().toLowerCase(Locale.getDefault()).contains(charText)) {
                     Search.add(wp);
                 }
             }

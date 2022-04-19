@@ -6,7 +6,7 @@ import android.widget.ListView;
 import android.widget.SearchView;
 
 import com.example.project3.adapter.ListViewAdapter;
-import com.example.project3.model.Search;
+import com.example.project3.model.SearchNames;
 
 import java.util.ArrayList;
 
@@ -17,9 +17,9 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
     ListView list;
     ListViewAdapter adapter;
     SearchView editsearch;
-    String[] SearchList;
-    ArrayList<SearchActivity> arraylist = new ArrayList<SearchActivity>();
-    private Object Search;
+    String[] searchNameList;
+    ArrayList<SearchNames> arraylist = new ArrayList<SearchNames>();
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,27 +28,27 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
 
         // Generate sample data
 
-        Search = new String[]{"aa", "bb", "cc ",
-                "dd", "ee", "ff ", " gg ", "hh",
-                " ii"," ee "," oo"};
+        searchNameList = new String[]{"on", "Time", "go",
+                "java", "csueb", "phone", "apple", "hello",
+                "bye","why","Money"};
 
         // Locate the ListView in listview_main.xml
-        list = (ListView) findViewById(R.id.listview);
+        list = findViewById(R.id.listview);
 
-        for (int i = 0; i < SearchList.length; i++) {
-           Search  = new Search(SearchList[i]);
+        for (String s :searchNameList) {
+            SearchNames searchNames = new SearchNames(s);
             // Binds all strings into an array
-            arraylist.add((SearchActivity) Search);
+            arraylist.add(searchNames);
         }
 
         // Pass results to ListViewAdapter Class
-        adapter = new ListViewAdapter(this, arraylist);
+        adapter = new ListViewAdapter(this,arraylist );
 
         // Binds the Adapter to the ListView
         list.setAdapter(adapter);
 
         // Locate the EditText in listview_main.xml
-        editsearch = (SearchView) findViewById(R.id.search);
+        editsearch = findViewById(R.id.search);
         editsearch.setOnQueryTextListener(this);
     }
 
@@ -60,9 +60,7 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        String text = newText;
-        adapter.filter(text);
+        adapter.filter(newText);
         return false;
     }
 }
-
