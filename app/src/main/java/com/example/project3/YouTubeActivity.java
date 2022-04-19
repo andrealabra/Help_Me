@@ -12,7 +12,7 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YouTubeActivity extends YouTubeBaseActivity {
 
-    String api_key = "AIzaSyCCErw2GHN9SJo9jAs_cgPZkk_YggYf9RY";
+    String api_key = getString(R.string.youtube_api_key);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
