@@ -16,7 +16,7 @@
             android:exported="false" />
         <activity
             android:name=".YouTubeActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".PostingActivity"
             android:exported="true" />
