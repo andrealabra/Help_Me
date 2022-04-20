@@ -40,10 +40,10 @@
         android:layout_marginEnd="12dp"
         android:text="WATCH IT!"
         app:layout_constraintBottom_toBottomOf="@+id/postitBtn"
-        app:layout_constraintEnd_toStartOf="@+id/calculateitBt" />
+        app:layout_constraintEnd_toStartOf="@+id/calculateitBtn" />
 
     <Button
-        android:id="@+id/calculateitBt"
+        android:id="@+id/calculateitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
