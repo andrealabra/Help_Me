@@ -22,9 +22,7 @@
             android:exported="true" />
         <activity
             android:name=".SearchActivity"
-            android:exported="false"
-            android:label="SearchActivity"
-            android:theme="@style/Animation.Design.BottomSheetDialog" />
+            android:exported="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
