@@ -21,8 +21,12 @@
             android:name=".PostingActivity"
             android:exported="true" />
 
+
+        <activity android:name=".Results"
+            android:exported="false"/>
         <activity android:name=".FinalCalculator"
             android:exported="true"/>
+
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
