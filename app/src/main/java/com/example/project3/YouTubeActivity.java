@@ -1,7 +1,5 @@
 package com.example.project3;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -13,13 +11,14 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YouTubeActivity extends YouTubeBaseActivity {
 
     String api_key = ""; //getString(R.string.youtube_api_key);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_you_tube);
 
         // Get reference to the view of Video player
-        YouTubePlayerView ytPlayer = (YouTubePlayerView)findViewById(R.id.ytPlayer);
+   /*    YouTubePlayerView ytPlayer = (YouTubePlayerView)findViewById(R.id.ytPlayer);
 
         ytPlayer.initialize(
                 api_key,
@@ -50,5 +49,6 @@ public class YouTubeActivity extends YouTubeBaseActivity {
                         Toast.makeText(getApplicationContext(), "Video player Failed", Toast.LENGTH_SHORT).show();
                     }
                 });
+    } */
     }
 }
