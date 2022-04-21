@@ -1,107 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FinalCalculator">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Final Grade"
+        android:textAllCaps="true"
+        android:textSize="30dp"
+        app:fontFamily="@font/" />
 
     <TextView
-        android:id="@+id/currentGrdae"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
-        android:text="Current Base "
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/wantedGrade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Wanted Grade"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/currentGrdae"
-        app:layout_constraintTop_toBottomOf="@+id/currentGrdae" />
-
-    <TextView
-        android:id="@+id/neededGrade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="20dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="@+id/finalWorth"
-        app:layout_constraintTop_toBottomOf="@+id/finalWorth" />
-
-    <TextView
-        android:id="@+id/finalWorth"
-        android:layout_width="112dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="8dp"
-        android:text="Final Worth "
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/wantedGrade"
-        app:layout_constraintTop_toBottomOf="@+id/wantedGrade" />
+        android:text="Current Grade(in %)" />
 
     <EditText
-        android:id="@+id/currentInput"
-        android:layout_width="wrap_content"
+        android:id="@+id/currentGrade"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/currentGrdae"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/currentGrdae"
-        app:layout_constraintTop_toTopOf="@+id/currentGrdae"
-        app:layout_constraintVertical_bias="0.47" />
+        android:text="" />
 
-    <SeekBar
-        android:id="@+id/wantedPercentage"
-        android:layout_width="200dp"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:max="100"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/currentInput"
-        app:layout_constraintTop_toBottomOf="@+id/currentInput" />
+        android:text="Grade Desired (in %)" />
 
     <EditText
-        android:id="@+id/finalWorthInput"
-        android:layout_width="wrap_content"
+        android:id="@+id/gradeDesired"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="@+id/finalWorth"
-        app:layout_constraintStart_toStartOf="@+id/wantedPercentage"
-        app:layout_constraintTop_toTopOf="@+id/finalWorth"
-        app:layout_constraintVertical_bias="1.0" />
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Final Weight (in %)" />
+
+    <EditText
+        android:id="@+id/finalWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="" />
+
 
     <Button
-        android:id="@+id/btnCalculate"
+        android:id="@+id/calculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Calculate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/neededGrade" />
+        android:layout_gravity="center_horizontal"
+        android:text="Calculate" />
 
     <TextView
-        android:id="@+id/wantedPercentageShow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="0%"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
-</RelativeLayout>
+        android:id="@+id/result_test"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:textSize="20dp"/>
+
+</LinearLayout>
