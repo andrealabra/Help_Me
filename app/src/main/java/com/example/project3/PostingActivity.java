@@ -31,10 +31,6 @@ public class PostingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posting);
-        listView = findViewById(R.id.lv_listView);
-
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,countries);
-        listView.setAdapter(arrayAdapter);
     }
 
 
