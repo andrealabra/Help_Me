@@ -15,18 +15,6 @@
         android:hint="Type your question here..."/>
 
     <Button
-        android:id="@+id/postImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Take Picture"/>
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        tools:srcCompat="@tools:sample/avatars"/>
-
-    <Button
         android:id="@+id/btnPostit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

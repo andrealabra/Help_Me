@@ -3,38 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/Adrian Anderson/AndroidStudioProjects/Help_Me/app/src/main/res/layout/activity_you_tube.xml" value="0.30833333333333335" />
+        <entry key="..\:/Users/Adrian Anderson/AndroidStudioProjects/Help_Me/app/src/main/res/layout/fragment_blank.xml" value="0.3125" />
+        <entry key="..\:/Users/Adrian Anderson/AndroidStudioProjects/Help_Me/app/src/main/res/layout/listview_item.xml" value="0.3125" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.185" />
-        <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/input_add_post_bg.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/input_comment_bg.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_final_calculator.xml" value="0.15520833333333334" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.28030090332031254" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_main_youtube.xml" value="0.1453125" />
-        <entry key="app/src/main/res/layout/activity_posting.xml" value="0.2649093627929688" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.19043935139973958" />
-        <entry key="app/src/main/res/layout/activity_results.xml" value="0.1453125" />
-        <entry key="app/src/main/res/layout/activity_searchactivity.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_setup.xml" value="0.22505800464037123" />
-        <entry key="app/src/main/res/layout/activity_video_list.xml" value="0.1453125" />
-        <entry key="app/src/main/res/layout/activity_you_tube.xml" value="0.2981297810872396" />
-        <entry key="app/src/main/res/layout/activity_youtube_list.xml" value="0.32231648763020837" />
+        <entry key="app/src/main/res/layout/activity_final_calculator.xml" value="0.11539154052734375" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3264663696289063" />
+        <entry key="app/src/main/res/layout/activity_posting.xml" value="0.24739583333333334" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.10001678466796875" />
+        <entry key="app/src/main/res/layout/activity_results.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_searchactivity.xml" value="0.1765625" />
+        <entry key="app/src/main/res/layout/activity_you_tube.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_youtube_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_scrolling.xml" value="0.24739583333333334" />
-        <entry key="app/src/main/res/layout/drawer_header.xml" value="0.30009002685546876" />
-        <entry key="app/src/main/res/layout/fragment_seach.xml" value="0.15520833333333334" />
-        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.15520833333333334" />
-        <entry key="app/src/main/res/layout/listview_item.xml" value="0.6257293701171875" />
-        <entry key="app/src/main/res/layout/main_appbar.xml" value="0.15520833333333334" />
-        <entry key="app/src/main/res/layout/singh_view_post.xml" value="0.26881732238973666" />
-        <entry key="app/src/main/res/layout/single_view_post.xml" value="0.15228137268270536" />
-        <entry key="app/src/main/res/layout/video_item_design.xml" value="0.1" />
-        <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.28249969482421877" />
-        <entry key="app/src/main/res/menu/menu_posting.xml" value="0.5371810913085938" />
-        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.22758026123046876" />
-        <entry key="app/src/main/res/menu/youtube_menu.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/layout/listview_item.xml" value="0.1125" />
+        <entry key="app/src/main/res/menu/menu_posting.xml" value="0.1765625" />
+        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

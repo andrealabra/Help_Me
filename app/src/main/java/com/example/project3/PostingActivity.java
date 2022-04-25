@@ -1,58 +1,95 @@
 package com.example.project3;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SearchView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class PostingActivity extends AppCompatActivity {
-    ListView listView;
-    String[] countries = new String[]{"Nauru", "Nepal", "Netherlands", "Netherlands Antilles",
-            "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands",
-            "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Palestine", "Peru", "Philippines", "Pitcairn",
-            "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russian Federation", "Rwanda",
-            "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino",
-            "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Seychelles", "Sierra Leone", "Singapore",
-            "Slovakia (Slovak Republic)", "Slovenia", "Solomon Islands", "Somalia", "South Africa",
-            "South Georgia and the South Sandwich Islands", "Spain", "Sri Lanka", "St. Helena", "St. Pierre and Miquelon",
-            "Sudan", "Suriname", "Svalbard and Jan Mayen Islands", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic",
-            "Taiwan", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Tibet", "Togo", "Tokelau", "Tonga",
-            "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine",
-            "United Arab Emirates", "United Kingdom", "United States", "United States Minor Outlying Islands", "Uruguay",
-            "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Virgin Islands (British)", "Virgin Islands (U.S.)",
-            "Wallis and Futuna Islands", "Western Sahara", "Yemen", "Yugoslavia", "Zambia", "Zimbabwe"};
-    ArrayAdapter<String> arrayAdapter;
+   //connecting firebase database to posting screen
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://helpme-19a66-default-rtdb.firebaseio.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posting);
     }
+   // final EditText question  = findViewById(R.id.postQs);
+
+   // final Button postitBtn = findViewById(R.id.postitBtn);
+
+ /*
+        postitBtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            //turn data into string val
+            final String question = postQs.getText().toString();
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.nav_menu,menu);
-        MenuItem menuItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) menuItem.getActionView();
-        searchView.setQueryHint("Type here to search");
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
+            //make sure all spaces are fielded
+            if(fullnameTxt.isEmpty() || emailTxt.isEmpty() || phoneTxt.isEmpty()
+                    || passwordTxt.isEmpty())
+            {
+                Toast.makeText(RegisterActivity.this, "Fill in all fields to continue", Toast.LENGTH_SHORT).show();
             }
 
-            @Override
-            public boolean onQueryTextChange(String s) {
-                arrayAdapter.getFilter().filter(s);
-                return false;
+            //This is to see if all passwords match
+            else if(!passwordTxt.equals(conPasswordTxt))
+            {
+                Toast.makeText(RegisterActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             }
-        });
-        return super.onCreateOptionsMenu(menu);
 
-    }
+            else{
+                databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        //see if the number is registered
+
+                        if(snapshot.hasChild(phoneTxt)){
+                            Toast.makeText(RegisterActivity.this, "This phone number is already associated with an account", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            //send data to firebase & making phone number the unique id, everything wil be under phone number
+                            databaseReference.child("users").child(phoneTxt).child("fullname").setValue(fullnameTxt);
+                            databaseReference.child("users").child(phoneTxt).child("email").setValue(emailTxt);
+                            databaseReference.child("users").child(phoneTxt).child("password").setValue(passwordTxt);
+
+                            Toast.makeText(RegisterActivity.this, "Registration done sucessfully", Toast.LENGTH_SHORT).show();
+                            finish();
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+            }
+
+        }
+    });
+
+        loginNowBtn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            finish();
+        }
+    });
+
+}
+} */ 
+
 }
