@@ -3,6 +3,15 @@
     package="com.example.project3">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -14,9 +23,17 @@
         <activity
             android:name=".YoutubeListActivity"
             android:exported="false" />
+        <activity android:name=".VideoListActivity"
+            android:exported="false"
+            />
+
+        <activity android:name=".YoutubeVideoPlayerActivity"
+            android:exported="false"
+            />
         <activity
-            android:name=".YouTubeActivity"
+            android:name=".MainYouTubeActivity"
             android:exported="true" />
+
         <activity
             android:name=".PostingActivity"
             android:exported="true" />
@@ -34,9 +51,9 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".MainActivity"

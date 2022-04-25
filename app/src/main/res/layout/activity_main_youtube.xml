@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainYouTubeActivity">
+
+    <Button
+        android:onClick="testClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="US History"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+
+    <Button
+        android:onClick="playListClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Measurement and data"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+    <Button
+        android:onClick="playListClick2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Earth geological and climatic history"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+    <Button
+        android:onClick="playListClick4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Geometry"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+
+</LinearLayout>

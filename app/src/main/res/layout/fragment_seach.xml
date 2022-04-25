@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".YoutubeListActivity">
+    tools:context=".SeachFragment">
 
     <EditText
         android:id="@+id/input_query"
@@ -40,3 +40,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_query" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
