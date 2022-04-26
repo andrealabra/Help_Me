@@ -3,6 +3,8 @@ package com.example.project3;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,11 +21,18 @@ import com.google.firebase.database.ValueEventListener;
 public class PostingQs extends AppCompatActivity {
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://helpme-19a66-default-rtdb.firebaseio.com/");
-
+    //phone number of user used for accessing related Firestore content
+    String phone = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posting_qs);
+
+        //read in the users phone number thatg serves as ID into the firestore
+        //SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        phone = sharedPref.getString("phone", "stupid");
 
         final EditText postIt = findViewById(R.id.postQs);
         final EditText phone = findViewById(R.id.phone);

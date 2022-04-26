@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         movePost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PostingActivity.class);
+                Intent intent = new Intent(MainActivity.this, PostingQs.class);
                 startActivity(intent);
             }
         });

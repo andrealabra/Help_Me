@@ -3,6 +3,8 @@ package com.example.project3;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +25,11 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        Context context = this;
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+
 
         final EditText fullname = findViewById(R.id.fullname);
         final EditText email = findViewById(R.id.email);
@@ -57,6 +64,11 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 else{
+                    //store to SharedPreferences teh phonenumber which serves as the ID for the user
+                    // will be used by other activities to access Firestore
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putString("phone", phoneTxt);
+                    editor.apply();
                     databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
