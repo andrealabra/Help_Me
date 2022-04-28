@@ -38,8 +38,6 @@ public class PostingQs extends AppCompatActivity {
         final EditText phone = findViewById(R.id.phone);
 
         final Button sendoffBtn = findViewById(R.id.btnPostit);
-        final Button postingNow = findViewById(R.id.postitBtn);
-
 
         sendoffBtn.setOnClickListener(new View.OnClickListener() {
             @Override
