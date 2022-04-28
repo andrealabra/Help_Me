@@ -25,11 +25,14 @@ public class MainActivity extends AppCompatActivity {
         moveCalculator = findViewById(R.id.calculateitBtn);
         moveLogout = findViewById(R.id.logoutBtn);
 
+        String phoneId = getIntent().getStringExtra("phoneId");
+
         movePost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PostingQs.class);
-                startActivity(intent);
+                Intent postingQs = new Intent(MainActivity.this, PostingQs.class);
+                postingQs.putExtra("phoneId", phoneId);
+                startActivity(postingQs);
             }
         });
 

@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
                 else{
-                    //store to SharedPreferences teh phonenumber which serves as the ID for the user
+                    //store to SharedPreferences the phone number which serves as the ID for the user
                     // will be used by other activities to access Firestore
                     SharedPreferences.Editor editor = sharedPref.edit();
                     editor.putString("phone", phoneTxt);

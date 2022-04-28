@@ -40,6 +40,8 @@ public class PostingQs extends AppCompatActivity {
         final Button sendoffBtn = findViewById(R.id.btnPostit);
         final Button postFromMain = findViewById(R.id.postitBtn);
 
+        String phoneId = getIntent().getStringExtra("phoneId");
+
         sendoffBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +61,7 @@ public class PostingQs extends AppCompatActivity {
                                 Toast.makeText(PostingQs.this, "Post already made", Toast.LENGTH_SHORT).show();
                             } else {
 
-                                databaseReference.child("users").child("question").setValue(postItTxt);
+                                databaseReference.child("users").child(phoneId).child("question").setValue(postItTxt);
 
                                 Toast.makeText(PostingQs.this, "Question posted successfully", Toast.LENGTH_SHORT).show();
                                 finish();

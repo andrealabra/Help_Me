@@ -53,7 +53,9 @@ public class LoginActivity extends AppCompatActivity {
                                     Toast.makeText(LoginActivity.this, "You have sucessfully logged in", Toast.LENGTH_SHORT).show();
 
                                     //This is where we will go from login screens to main
-                                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                    Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+                                    loginIntent.putExtra("phoneId",phoneTxt);
+                                    startActivity(loginIntent);
                                     finish();
                                 }
                                 else{
