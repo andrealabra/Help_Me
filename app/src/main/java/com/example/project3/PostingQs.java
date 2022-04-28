@@ -35,12 +35,12 @@ public class PostingQs extends AppCompatActivity {
         phone = sharedPref.getString("phone", "stupid");
 
         final EditText postIt = findViewById(R.id.postQs);
-        final EditText phone = findViewById(R.id.phone);
+      //  final EditText phone = findViewById(R.id.phone);
 
         final Button sendoffBtn = findViewById(R.id.btnPostit);
         final Button postFromMain = findViewById(R.id.postitBtn);
 
-        postFromMain.setOnClickListener(new View.OnClickListener() {
+        sendoffBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
