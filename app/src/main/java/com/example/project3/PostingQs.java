@@ -55,11 +55,16 @@ public class PostingQs extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                            if (snapshot.hasChild(postItTxt)) {
+                                Toast.makeText(PostingQs.this, "Post already made", Toast.LENGTH_SHORT).show();
+                            } else {
+
                                 databaseReference.child("users").child("question").setValue(postItTxt);
 
                                 Toast.makeText(PostingQs.this, "Question posted successfully", Toast.LENGTH_SHORT).show();
                                 finish();
 
+                            }
                         }
 
                         @Override
