@@ -38,12 +38,13 @@ public class PostingQs extends AppCompatActivity {
         final EditText phone = findViewById(R.id.phone);
 
         final Button sendoffBtn = findViewById(R.id.btnPostit);
+        final Button postFromMain = findViewById(R.id.postitBtn);
 
-        sendoffBtn.setOnClickListener(new View.OnClickListener() {
+        postFromMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                final String phoneTxt = phone.getText().toString();
+                //final String phoneTxt = phone.getText().toString();
                 final String postItTxt = postIt.getText().toString();
 
                 if (postItTxt.isEmpty()) {
@@ -54,7 +55,7 @@ public class PostingQs extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                                databaseReference.child("users").child(phoneTxt).child("questions").setValue(postItTxt);
+                                databaseReference.child("users").child("question").setValue(postItTxt);
 
                                 Toast.makeText(PostingQs.this, "Question posted successfully", Toast.LENGTH_SHORT).show();
                                 finish();
