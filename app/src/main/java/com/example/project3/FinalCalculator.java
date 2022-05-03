@@ -11,7 +11,7 @@ import java.text.DecimalFormat;
 import com.example.project3.databinding.ActivityFinalCalculatorBinding;
 
 public class FinalCalculator extends AppCompatActivity {
-    // A Public Class FinalCalculator which extends AppCompactAcitivity Class
+    // A Public Class FinalCalculator which extends AppCompact activity Class
 // AppCompactActivity Class is used to add action bar in the application
         // A returnFinalGrade variable of string type with private access modifier
         private String returnFinalGrade;
