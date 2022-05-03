@@ -67,7 +67,7 @@ public class PostingQs extends AppCompatActivity {
                                 Toast.makeText(PostingQs.this, "Else clause", Toast.LENGTH_SHORT).show();
 
                                 databaseReference.child("users").child(phoneId).child("question").setValue(postItTxt);
-
+                                //Weird
                                 Toast.makeText(PostingQs.this, "Question posted successfully", Toast.LENGTH_SHORT).show();
                                // finish();
 
