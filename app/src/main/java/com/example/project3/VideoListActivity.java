@@ -30,14 +30,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VideoListActivity extends AppCompatActivity {
-
+    /**
+     * private string that return video_url
+     */
     private String VIDEO_URL;
+    /**
+     * private static string key
+     */
     private static final String KEY = "AIzaSyDLHry3kf-afitZTogzipOSOQwokQIqbUk";
+    /**
+     * private RecycleView that return play list video
+     */
 
     private RecyclerView recyclerViewPlayListVideo;
+    /**
+     * private List that stores play list
+     */
     private List<Video> playList;
+    /**
+     * private Video ListAdapter adapter
+     */
     private VideoListAdapter adapter;
+
+    /**
+     * private nextPageToken thats a string
+     */
     private String nextPageToken;
+
+    /**
+     * private ProgressBar
+     */
 
     private ProgressDialog progressBar;
 

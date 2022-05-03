@@ -17,6 +17,9 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class YoutubeVideoPlayerActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener
 {
+    /**
+     * private string
+     */
     private String videoId;
     /**
      *
