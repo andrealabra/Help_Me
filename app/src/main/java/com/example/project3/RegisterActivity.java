@@ -30,16 +30,35 @@ public class RegisterActivity extends AppCompatActivity {
         SharedPreferences sharedPref = context.getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
 
-
+        /**
+         * Full name of the user
+         */
         final EditText fullname = findViewById(R.id.fullname);
+        /**
+         * The user e-mail address
+         */
         final EditText email = findViewById(R.id.email);
+        /**
+         * The user phone number
+         */
         final EditText phone = findViewById(R.id.phone);
+        /**
+         * The password edit text field
+         */
         final EditText password = findViewById(R.id.pasword);
         final EditText conPassword = findViewById(R.id.conPasword);
-
+        /**
+         * The register button to register the user
+         */
         final Button registerBtn = findViewById(R.id.registerBtn);
+        /**
+         * The login button to log the user in the app
+         */
         final TextView loginNowBtn = findViewById(R.id.loginNow);
 
+        /**
+         * 
+         */
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
