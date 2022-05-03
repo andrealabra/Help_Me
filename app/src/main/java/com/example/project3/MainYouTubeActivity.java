@@ -23,13 +23,21 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class MainYouTubeActivity extends AppCompatActivity {
 
-
+    /**
+     *
+     * @param savedInstanceState onCreate(Bundle) is called when the activity first starts up.
+     * and save the state of the application in a bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_youtube);
     }
 
+    /**
+     *
+     * @param view  Making button link that takes play ID and URL of the video
+     */
     public void playListClick(View view)
     {
         startActivity(new Intent(this , VideoListActivity.class)
@@ -37,18 +45,29 @@ public class MainYouTubeActivity extends AppCompatActivity {
 
 
     }
-
+    /**
+     *
+     * @param view  Making button link that takes play ID and URL of the video
+     */
 
     public void playListClick2(View view)
     {
         startActivity(new Intent(this , VideoListActivity.class)
-                .putExtra("playListId", "PLSQl0a2vh4HBrIb03_adNggSGabJHtyAM"));
+                .putExtra("playListyId", "PLSQl0a2vh4HBrIb03_adNggSGabJHtyAM"));
     }
+    /**
+     *
+     * @param view  Making button link that takes play ID and URL of the video
+     */
 
     public void playListClick4(View view) {
         startActivity(new Intent(this , VideoListActivity.class)
                 .putExtra("playListId", "PLSQl0a2vh4HBxoP1tZaejDjVn2Ysf_WDj"));
     }
+    /**
+     *
+     * @param view  Making button link that takes play ID and URL of the video
+     */
 
 
     public void testClick(View view) {

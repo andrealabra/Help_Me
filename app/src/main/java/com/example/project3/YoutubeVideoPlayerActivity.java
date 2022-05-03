@@ -18,6 +18,11 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class YoutubeVideoPlayerActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener
 {
     private String videoId;
+    /**
+     *
+     * @param savedInstanceState onCreate(Bundle) is called when the activity first starts up.
+     *and save the state of the application in a bundle
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

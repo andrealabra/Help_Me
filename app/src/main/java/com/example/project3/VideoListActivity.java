@@ -41,7 +41,10 @@ public class VideoListActivity extends AppCompatActivity {
 
     private ProgressDialog progressBar;
 
-
+    /**
+     *
+     * @param savedInstanceState onCreate(Bundle) is called when the activity first starts up. and save the state of the application in a bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +53,7 @@ public class VideoListActivity extends AppCompatActivity {
         initViews();
 
     }
+
 
     private void initViews() {
         String playListId = getIntent().getStringExtra("playListId");
@@ -68,8 +72,11 @@ public class VideoListActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * getAllVideos gets videos according to play lists IDS
+     */
 
-    // get video according play list id
+
     private void getAllVideos() {
 
         progressBar.show();
@@ -83,10 +90,6 @@ public class VideoListActivity extends AppCompatActivity {
 
                     JSONArray jsonArray = response.getJSONArray("items");
 
-//                    if (response.get("nextPageToken").toString() != null) {
-//                        nextPageToken = response.get("nextPageToken").toString();
-//                        Log.d("nextPageToken", "onResponseAllVIdeo: " + jsonArray.length());
-//                    }
 
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject object = jsonArray.getJSONObject(i);
@@ -124,52 +127,6 @@ public class VideoListActivity extends AppCompatActivity {
 
         Singleton.getInstance(this).addToRequestQueue(jsonObjectRequest);
 
-//        StringRequest request = new StringRequest(Request.Method.GET, VIDEO_URL, new Response.Listener<String>() {
-//            @Override
-//            public void onResponse(String response) {
-//
-//                try {
-//
-//                    JSONObject jsonObject = new JSONObject(response);
-//                    JSONArray jsonArray = jsonObject.getJSONArray("items");
-//
-//                    nextPageToken = jsonObject.get("nextPageToken").toString();
-//                    Log.d("nextPageToken", "onResponseAllVIdeo: "+nextPageToken);
-//
-//
-//                    for (int i = 0; i < jsonArray.length(); i++) {
-//                        JSONObject object = jsonArray.getJSONObject(i);
-//                        Log.d("uzairTag", "onResponse: "+object.get("id").toString());
-//                        Gson gson = new Gson();
-//                        /// convert json to java
-//                        Video videoList = gson.fromJson(String.valueOf(object), Video.class);
-//                        playList.add(videoList);
-//                    }
-//
-//                    recyclerViewPlayListVideo.setAdapter(adapter);
-//                    adapter.notifyDataSetChanged();
-//
-//
-//                    progressBar.dismiss();
-//
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                    progressBar.dismiss();
-//                }
-//
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//
-//                progressBar.dismiss();
-//                Toast.makeText(VideoListActivity.this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
-//
-//            }
-//        });
-//
-//        Singleton.getInstance(this).addToRequestQueue(request);
 
     }
 }

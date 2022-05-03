@@ -32,7 +32,7 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.MyVi
         return new MyViewHolder(LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.video_item_design, null));
     }
-    // open that xml design
+
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
