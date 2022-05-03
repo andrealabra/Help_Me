@@ -49,6 +49,8 @@ public class PostingQs extends AppCompatActivity {
                 //final String phoneTxt = phone.getText().toString();
                 final String postItTxt = postIt.getText().toString();
 
+                Toast.makeText(PostingQs.this, "OnClick Action", Toast.LENGTH_SHORT).show();
+
                 if (postItTxt.isEmpty()) {
                     Toast.makeText(PostingQs.this, "Please type in a question", Toast.LENGTH_SHORT).show();
                 }
@@ -57,14 +59,17 @@ public class PostingQs extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                            Toast.makeText(PostingQs.this, "OnDataChange", Toast.LENGTH_SHORT).show();
+
                             if (snapshot.hasChild(postItTxt)) {
                                 Toast.makeText(PostingQs.this, "Post already made", Toast.LENGTH_SHORT).show();
                             } else {
+                                Toast.makeText(PostingQs.this, "Else clause", Toast.LENGTH_SHORT).show();
 
                                 databaseReference.child("users").child(phoneId).child("question").setValue(postItTxt);
 
                                 Toast.makeText(PostingQs.this, "Question posted successfully", Toast.LENGTH_SHORT).show();
-                                finish();
+                               // finish();
 
                             }
                         }
@@ -80,12 +85,12 @@ public class PostingQs extends AppCompatActivity {
         });
 
 
-        sendoffBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+//        sendoffBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
 
     }
 }
