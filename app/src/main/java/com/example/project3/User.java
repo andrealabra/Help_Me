@@ -1,20 +1,17 @@
 package com.example.project3;
 
 public class User {
-    private String username;
-    private String password;
+  String question;
 
+  public User(){
 
-    public String getUsername() {
-        return username;
+  }
+
+    public String getQuestion() {
+        return question;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-
-    public User(String username) {
-        this.username = username;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 }

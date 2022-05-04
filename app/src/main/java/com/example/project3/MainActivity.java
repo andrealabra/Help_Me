@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private Button moveLogout;
 
+    private Button moveDisplay;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +84,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+      /*  moveDisplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, displayQs.class);
+                startActivity(intent);
+            }
+        }); */
 
         /**
          * moveLogout Button to listen to the receive click event.

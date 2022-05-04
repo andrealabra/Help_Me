@@ -21,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project3">
         <activity
+            android:name=".displayQs"
+            android:exported="true" />
+        <activity
             android:name=".PostingQs"
             android:exported="false" />
         <activity
@@ -38,8 +41,9 @@
         <activity
             android:name=".PostingActivity"
             android:exported="true" />
-        <activity android:name=".Results"
-           android:exported="false" />
+        <activity
+            android:name=".Results"
+            android:exported="false" />
         <activity
             android:name=".FinalCalculator"
             android:exported="true" />
